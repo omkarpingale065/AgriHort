@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Guide - AgriHort Connect</title>
+    <meta name="description" content="Comprehensive guide to horticultural crops with growing techniques and best practices">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/crops.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">
+                    <i class="fas fa-seedling"></i>
+                    <span>AgriHort Connect</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="crops.html" class="nav-link active">Crops Guide</a>
+                <a href="farmers.html" class="nav-link">Farmers Portal</a>
+                <a href="survey.html" class="nav-link">Survey</a>
+                <a href="support.html" class="nav-link">Support</a>
+                <a href="login.html" class="nav-link login-btn">
+                    <i class="fas fa-user"></i> Login
+                </a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="crops-hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Rare Horticultural Crops Guide</h1>
+                <p class="hero-subtitle">Explore 30+ lesser-known but highly valuable horticultural crops that can transform your farming success. Discover exotic fruits, premium spices, and specialty vegetables with exceptional market potential.</p>
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="crop-search" placeholder="Search crops by name, category, or season...">
+                    </div>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All Crops</button>
+                        <button class="filter-btn" data-filter="fruits">Exotic Fruits</button>
+                        <button class="filter-btn" data-filter="vegetables">Specialty Vegetables</button>
+                        <button class="filter-btn" data-filter="spices">Premium Spices</button>
+                        <button class="filter-btn" data-filter="herbs">Rare Herbs</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crop Categories -->
+    <section class="crop-categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Crop Categories</h2>
+                <p class="section-subtitle">Explore different types of horticultural crops</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card" data-category="fruits">
+                    <div class="category-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3>Fruits</h3>
+                    <p>Nutritious and profitable fruit crops</p>
+                    <span class="crop-count">25+ varieties</span>
+                </div>
+                <div class="category-card" data-category="vegetables">
+                    <div class="category-icon">
+                        <i class="fas fa-carrot"></i>
+                    </div>
+                    <h3>Vegetables</h3>
+                    <p>Essential vegetable crops for daily nutrition</p>
+                    <span class="crop-count">40+ varieties</span>
+                </div>
+                <div class="category-card" data-category="flowers">
+                    <div class="category-icon">
+                        <i class="fas fa-flower"></i>
+                    </div>
+                    <h3>Flowers</h3>
+                    <p>Beautiful ornamental and commercial flowers</p>
+                    <span class="crop-count">20+ varieties</span>
+                </div>
+                <div class="category-card" data-category="herbs">
+                    <div class="category-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Herbs & Spices</h3>
+                    <p>Medicinal and culinary herbs</p>
+                    <span class="crop-count">15+ varieties</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crop Grid -->
+    <section class="crops-grid-section">
+        <div class="container">
+            <div class="crops-grid" id="crops-grid">
+                <!-- Fruits -->
+                <div class="crop-card" data-category="fruits" data-season="summer">
+                    <div class="crop-image">
+                        <img src="../assets/images/crops/mango.jpg" alt="Mango" loading="lazy">
+                        <div class="crop-badge">Fruit</div>
+                    </div>
+                    <div class="crop-info">
+                        <h3>Mango</h3>
+                        <p class="crop-scientific">Mangifera indica</p>
+                        <div class="crop-details">
+                            <span class="detail-item"><i class="fas fa-calendar"></i> Summer</span>
+                            <span class="detail-item"><i class="fas fa-clock"></i> 3-5 years</span>
+                            <span class="detail-item"><i class="fas fa-thermometer-half"></i> 24-27°C</span>
+                        </div>
+                        <p class="crop-description">King of fruits, highly profitable with excellent market demand.</p>
+                        <div class="crop-actions">
+                            <button class="btn btn-primary crop-details-btn" data-crop="mango">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="crop-card" data-category="fruits" data-season="all">
+                    <div class="crop-image">
+                        <img src="../assets/images/crops/grapes.jpg" alt="Grapes" loading="lazy">
+                        <div class="crop-badge">Fruit</div>
+                    </div>
+                    <div class="crop-info">
+                        <h3>Grapes</h3>
+                        <p class="crop-scientific">Vitis vinifera</p>
+                        <div class="crop-details">
+                            <span class="detail-item"><i class="fas fa-calendar"></i> All Season</span>
+                            <span class="detail-item"><i class="fas fa-clock"></i> 2-3 years</span>
+                            <span class="detail-item"><i class="fas fa-thermometer-half"></i> 15-25°C</span>
+                        </div>
+                        <p class="crop-description">Premium fruit crop with wine-making potential and high export value.</p>
+                        <div class="crop-actions">
+                            <button class="btn btn-primary crop-details-btn" data-crop="grapes">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="crop-card" data-category="fruits" data-season="winter">
+                    <div class="crop-image">
+                        <img src="../assets/images/crops/pomegranate.jpg" alt="Pomegranate" loading="lazy">
+                        <div class="crop-badge">Fruit</div>
+                    </div>
+                    <div class="crop-info">
+                        <h3>Pomegranate</h3>
+                        <p class="crop-scientific">Punica granatum</p>
+                        <div class="crop-details">
+                            <span class="detail-item"><i class="fas fa-calendar"></i> Winter</span>
+                            <span class="detail-item"><i class="fas fa-clock"></i> 2-3 years</span>
+                            <span class="detail-item"><i class="fas fa-thermometer-half"></i> 18-25°C</span>
+                        </div>
+                        <p class="crop-description">Antioxidant-rich fruit with medicinal properties and good market price.</p>
+                        <div class="crop-actions">
+                            <button class="btn btn-primary crop-details-btn" data-crop="pomegranate">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vegetables -->
+                <div class="crop-card" data-category="vegetables" data-season="summer">
+                    <div class="crop-image">
+                        <img src="../assets/images/crops/tomato.jpg" alt="Tomato" loading="lazy">
+                        <div class="crop-badge">Vegetable</div>
+                    </div>
+                    <div class="crop-info">
+                        <h3>Tomato</h3>
+                        <p class="crop-scientific">Solanum lycopersicum</p>
+                        <div class="crop-details">
+                            <span class="detail-item"><i class="fas fa-calendar"></i> Summer</span>
+                            <span class="detail-item"><i class="fas fa-clock"></i> 3-4 months</span>
+                            <span class="detail-item"><i class="fas fa-thermometer-half"></i> 20-25°C</span>
+                        </div>
+                        <p class="crop-description">High-yield vegetable crop with consistent market demand.</p>
+                        <div class="crop-actions">
+                            <button class="btn btn-primary crop-details-btn" data-crop="tomato">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="crop-card" data-category="vegetables" data-season="winter">
+                    <div class="crop-image">
+                        <img src="../assets/images/crops/cabbage.jpg" alt="Cabbage" loading="lazy">
+                        <div class="crop-badge">Vegetable</div>
+                    </div>
+                    <div class="crop-info">
+                        <h3>Cabbage</h3>
+                        <p class="crop-scientific">Brassica oleracea</p>
+                        <div class="crop-details">
+                            <span class="detail-item"><i class="fas fa-calendar"></i> Winter</span>
+                            <span class="detail-item"><i class="fas fa-clock"></i> 2-3 months</span>
+                            <span class="detail-item"><i class="fas fa-thermometer-half"></i> 15-20°C</span>
+                        </div>
+                        <p class="crop-description">Cool-season crop with excellent storage and processing potential.</p>
+                        <div class="crop-actions">
+                            <button class="btn btn-primary crop-details-btn" data-crop="cabbage">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="crop-card" data-category="vegetables" data-season="monsoon">
+                    <div class="crop-image">
+                        <img src="../assets/images/crops/okra.jpg" alt="Okra" loading="lazy">
+                        <div class="crop-badge">Vegetable</div>
+                    </div>
+                    <div class="crop-info">
+                        <h3>Okra (Bhindi)</h3>
+                        <p class="crop-scientific">Abelmoschus esculentus</p>
+                        <div class="crop-details">
+                            <span class="detail-item"><i class="fas fa-calendar"></i> Monsoon</span>
+                            <span class="detail-item"><i class="fas fa-clock"></i> 2-3 months</span>
+                            <span class="detail-item"><i class="fas fa-thermometer-half"></i> 25-30°C</span>
+                        </div>
+                        <p class="crop-description">Heat-tolerant vegetable with continuous harvesting potential.</p>
+                        <div class="crop-actions">
+                            <button class="btn btn-primary crop-details-btn" data-crop="okra">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flowers -->
+                <div class="crop-card" data-category="flowers" data-season="all">
+                    <div class="crop-image">
+                        <img src="../assets/images/crops/roses.jpg" alt="Roses" loading="lazy">
+                        <div class="crop-badge">Flower</div>
+                    </div>
+                    <div class="crop-info">
+                        <h3>Roses</h3>
+                        <p class="crop-scientific">Rosa species</p>
+                        <div class="crop-details">
+                            <span class="detail-item"><i class="fas fa-calendar"></i> All Season</span>
+                            <span class="detail-item"><i class="fas fa-clock"></i> 1-2 years</span>
+                            <span class="detail-item"><i class="fas fa-thermometer-half"></i> 18-25°C</span>
+                        </div>
+                        <p class="crop-description">Premium ornamental flower with high commercial value.</p>
+                        <div class="crop-actions">
+                            <button class="btn btn-primary crop-details-btn" data-crop="roses">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="crop-card" data-category="flowers" data-season="winter">
+                    <div class="crop-image">
+                        <img src="../assets/images/crops/marigold.jpg" alt="Marigold" loading="lazy">
+                        <div class="crop-badge">Flower</div>
+                    </div>
+                    <div class="crop-info">
+                        <h3>Marigold</h3>
+                        <p class="crop-scientific">Tagetes species</p>
+                        <div class="crop-details">
+                            <span class="detail-item"><i class="fas fa-calendar"></i> Winter</span>
+                            <span class="detail-item"><i class="fas fa-clock"></i> 2-3 months</span>
+                            <span class="detail-item"><i class="fas fa-thermometer-half"></i> 15-25°C</span>
+                        </div>
+                        <p class="crop-description">Fast-growing flower with religious and decorative significance.</p>
+                        <div class="crop-actions">
+                            <button class="btn btn-primary crop-details-btn" data-crop="marigold">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Herbs -->
+                <div class="crop-card" data-category="herbs" data-season="all">
+                    <div class="crop-image">
+                        <img src="../assets/images/crops/basil.jpg" alt="Basil" loading="lazy">
+                        <div class="crop-badge">Herb</div>
+                    </div>
+                    <div class="crop-info">
+                        <h3>Basil (Tulsi)</h3>
+                        <p class="crop-scientific">Ocimum basilicum</p>
+                        <div class="crop-details">
+                            <span class="detail-item"><i class="fas fa-calendar"></i> All Season</span>
+                            <span class="detail-item"><i class="fas fa-clock"></i> 2-3 months</span>
+                            <span class="detail-item"><i class="fas fa-thermometer-half"></i> 20-30°C</span>
+                        </div>
+                        <p class="crop-description">Sacred herb with medicinal properties and culinary uses.</p>
+                        <div class="crop-actions">
+                            <button class="btn btn-primary crop-details-btn" data-crop="basil">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="crop-card" data-category="herbs" data-season="winter">
+                    <div class="crop-image">
+                        <img src="../assets/images/crops/coriander.jpg" alt="Coriander" loading="lazy">
+                        <div class="crop-badge">Herb</div>
+                    </div>
+                    <div class="crop-info">
+                        <h3>Coriander</h3>
+                        <p class="crop-scientific">Coriandrum sativum</p>
+                        <div class="crop-details">
+                            <span class="detail-item"><i class="fas fa-calendar"></i> Winter</span>
+                            <span class="detail-item"><i class="fas fa-clock"></i> 1-2 months</span>
+                            <span class="detail-item"><i class="fas fa-thermometer-half"></i> 15-25°C</span>
+                        </div>
+                        <p class="crop-description">Essential culinary herb with both leaf and seed harvest.</p>
+                        <div class="crop-actions">
+                            <button class="btn btn-primary crop-details-btn" data-crop="coriander">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crop Detail Modal -->
+    <div class="modal" id="crop-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-crop-name">Crop Details</h2>
+                <button class="modal-close" id="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-seedling"></i>
+                        <span>AgriHort Connect</span>
+                    </div>
+                    <p>Empowering farmers through technology and community engagement for sustainable horticulture practices.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="farmers.html">Farmer Portal</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="survey.html">Community Survey</a></li>
+                        <li><a href="#">Best Practices</a></li>
+                        <li><a href="#">Weather Updates</a></li>
+                        <li><a href="#">Market Prices</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgriHort Connect. Developed by SPPU Computer Engineering Students.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/crop-database.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/crops.js"></script>
+</body>
+</html>

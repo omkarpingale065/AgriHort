@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriHort Connect - Horticulture Community Platform</title>
+    <meta name="description" content="Community Engagement Platform for Horticulture Education and Farmer Support">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <i class="fas fa-seedling"></i>
+            </div>
+            <div class="loading-text">AgriHort Connect</div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-seedling"></i>
+                    <span>AgriHort Connect</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="pages/about.html" class="nav-link">About</a>
+                <a href="pages/crops.html" class="nav-link">Crops Guide</a>
+                <a href="pages/farmers.html" class="nav-link">Farmers Portal</a>
+                <a href="pages/survey.html" class="nav-link">Survey</a>
+                <a href="pages/support.html" class="nav-link">Support</a>
+                <a href="pages/login.html" class="nav-link login-btn">
+                    <i class="fas fa-user"></i> Login
+                </a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <div class="floating-elements">
+                <div class="floating-element" style="--delay: 0s;"><i class="fas fa-leaf"></i></div>
+                <div class="floating-element" style="--delay: 2s;"><i class="fas fa-apple-alt"></i></div>
+                <div class="floating-element" style="--delay: 4s;"><i class="fas fa-carrot"></i></div>
+                <div class="floating-element" style="--delay: 6s;"><i class="fas fa-seedling"></i></div>
+            </div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Welcome to <span class="highlight">AgriHort Connect</span>
+                </h1>
+                <p class="hero-subtitle">Empowering Farmers Through Horticulture Education</p>
+                <p class="hero-description">
+                    A comprehensive platform connecting farmers, students, and agricultural experts 
+                    to promote sustainable horticulture practices and community development.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="500">0</div>
+                        <div class="stat-label">Registered Farmers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="150">0</div>
+                        <div class="stat-label">Crop Varieties</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="1000">0</div>
+                        <div class="stat-label">Success Stories</div>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="pages/farmers.html" class="btn btn-primary">
+                        <i class="fas fa-tractor"></i> Join as Farmer
+                    </a>
+                    <a href="pages/crops.html" class="btn btn-secondary">
+                        <i class="fas fa-book-open"></i> Explore Crops
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-illustration">
+                    <div class="plant-container">
+                        <div class="plant plant-1">
+                            <div class="stem"></div>
+                            <div class="leaf leaf-1"></div>
+                            <div class="leaf leaf-2"></div>
+                            <div class="flower"></div>
+                        </div>
+                        <div class="plant plant-2">
+                            <div class="stem"></div>
+                            <div class="leaf leaf-1"></div>
+                            <div class="leaf leaf-2"></div>
+                            <div class="fruit"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Platform Features</h2>
+                <p class="section-subtitle">Comprehensive tools for horticulture community engagement</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Crop Database</h3>
+                    <p>Comprehensive information about various horticultural crops, growing techniques, and best practices.</p>
+                    <a href="pages/crops.html" class="feature-link">Explore Crops <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Farmer Portal</h3>
+                    <p>Dedicated platform for farmers to track crops, record profits, and share experiences with the community.</p>
+                    <a href="pages/farmers.html" class="feature-link">Join Portal <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-poll"></i>
+                    </div>
+                    <h3>Community Survey</h3>
+                    <p>Participate in surveys to help us understand community needs and improve agricultural practices.</p>
+                    <a href="pages/survey.html" class="feature-link">Take Survey <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Expert Support</h3>
+                    <p>Get expert advice, solve doubts, and connect with agricultural specialists for personalized guidance.</p>
+                    <a href="pages/support.html" class="feature-link">Get Support <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crops Showcase -->
+    <section class="crops-showcase" id="crops">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Popular Horticultural Crops</h2>
+                <p class="section-subtitle">Discover the most cultivated crops in our community</p>
+            </div>
+            <div class="crops-slider">
+                <div class="crop-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="crop-image">
+                        <img src="assets/images/crops/tomato.jpg" alt="Tomato" loading="lazy">
+                        <div class="crop-overlay">
+                            <h4>Tomato</h4>
+                            <p>High yield vegetable crop</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="crop-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="crop-image">
+                        <img src="assets/images/crops/mango.jpg" alt="Mango" loading="lazy">
+                        <div class="crop-overlay">
+                            <h4>Mango</h4>
+                            <p>King of fruits</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="crop-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="crop-image">
+                        <img src="assets/images/crops/grapes.jpg" alt="Grapes" loading="lazy">
+                        <div class="crop-overlay">
+                            <h4>Grapes</h4>
+                            <p>Premium fruit crop</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="crop-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="crop-image">
+                        <img src="assets/images/crops/roses.jpg" alt="Roses" loading="lazy">
+                        <div class="crop-overlay">
+                            <h4>Roses</h4>
+                            <p>Ornamental flowers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="crops-cta">
+                <a href="pages/crops.html" class="btn btn-primary">View All Crops</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Impact -->
+    <section class="impact" id="impact">
+        <div class="container">
+            <div class="impact-content">
+                <div class="impact-text" data-aos="fade-right">
+                    <h2>Community Impact</h2>
+                    <p>Our platform has been instrumental in transforming agricultural practices and improving farmer livelihoods across the region.</p>
+                    <div class="impact-points">
+                        <div class="impact-point">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Increased crop yield by 35%</span>
+                        </div>
+                        <div class="impact-point">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Reduced farming costs by 25%</span>
+                        </div>
+                        <div class="impact-point">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Connected 500+ farmers</span>
+                        </div>
+                        <div class="impact-point">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Promoted sustainable practices</span>
+                        </div>
+                    </div>
+                    <a href="pages/about.html" class="btn btn-outline">Learn More</a>
+                </div>
+                <div class="impact-visual" data-aos="fade-left">
+                    <div class="impact-chart">
+                        <div class="chart-container">
+                            <canvas id="impactChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta" id="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Join Our Growing Community</h2>
+                <p>Be part of the agricultural revolution. Connect with fellow farmers, learn new techniques, and grow together.</p>
+                <div class="cta-buttons">
+                    <a href="pages/farmers.html" class="btn btn-primary">Register as Farmer</a>
+                    <a href="pages/survey.html" class="btn btn-secondary">Take Community Survey</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-seedling"></i>
+                        <span>AgriHort Connect</span>
+                    </div>
+                    <p>Empowering farmers through technology and community engagement for sustainable horticulture practices.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="pages/crops.html">Crop Guide</a></li>
+                        <li><a href="pages/farmers.html">Farmer Portal</a></li>
+                        <li><a href="pages/support.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="pages/survey.html">Community Survey</a></li>
+                        <li><a href="#">Best Practices</a></li>
+                        <li><a href="#">Weather Updates</a></li>
+                        <li><a href="#">Market Prices</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@agrihortconnect.com</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-map-marker-alt"></i> SPPU, Pune, Maharashtra</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgriHort Connect. Developed by SPPU Computer Engineering Students for Community Engagement Project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/charts.js"></script>
+</body>
+</html>

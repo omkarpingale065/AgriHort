@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & Help - AgriHort Connect</title>
+    <meta name="description" content="Get expert support, solve doubts, and connect with agricultural specialists">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/support.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">
+                    <i class="fas fa-seedling"></i>
+                    <span>AgriHort Connect</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="crops.html" class="nav-link">Crops Guide</a>
+                <a href="farmers.html" class="nav-link">Farmers Portal</a>
+                <a href="survey.html" class="nav-link">Survey</a>
+                <a href="support.html" class="nav-link active">Support</a>
+                <a href="login.html" class="nav-link login-btn">
+                    <i class="fas fa-user"></i> Login
+                </a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="support-hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Support & Help Center</h1>
+                <p class="hero-subtitle">Get expert guidance for all your agricultural needs</p>
+                <p class="hero-description">
+                    Connect with agricultural experts, solve your doubts, and get personalized 
+                    guidance to improve your farming practices and crop yields.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" id="ask-question-btn">
+                        <i class="fas fa-question-circle"></i> Ask a Question
+                    </button>
+                    <button class="btn btn-secondary" id="browse-faqs-btn">
+                        <i class="fas fa-search"></i> Browse FAQs
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Options -->
+    <section class="support-options">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How Can We Help You?</h2>
+                <p class="section-subtitle">Choose the support option that best fits your needs</p>
+            </div>
+            <div class="options-grid">
+                <div class="option-card" data-option="expert-chat">
+                    <div class="option-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Expert Chat</h3>
+                    <p>Get instant answers from agricultural experts through our live chat system.</p>
+                    <div class="option-status">
+                        <span class="status-indicator online"></span>
+                        <span>Experts Online</span>
+                    </div>
+                    <button class="btn btn-primary">Start Chat</button>
+                </div>
+                <div class="option-card" data-option="video-call">
+                    <div class="option-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Consultation</h3>
+                    <p>Schedule a video call with specialists for detailed crop analysis and guidance.</p>
+                    <div class="option-status">
+                        <span class="status-indicator available"></span>
+                        <span>Available Today</span>
+                    </div>
+                    <button class="btn btn-primary">Schedule Call</button>
+                </div>
+                <div class="option-card" data-option="field-visit">
+                    <div class="option-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Field Visit</h3>
+                    <p>Request an on-site visit from our agricultural extension officers.</p>
+                    <div class="option-status">
+                        <span class="status-indicator limited"></span>
+                        <span>Limited Slots</span>
+                    </div>
+                    <button class="btn btn-primary">Request Visit</button>
+                </div>
+                <div class="option-card" data-option="community-forum">
+                    <div class="option-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Forum</h3>
+                    <p>Join discussions with fellow farmers and share experiences.</p>
+                    <div class="option-status">
+                        <span class="status-indicator active"></span>
+                        <span>1,250+ Members</span>
+                    </div>
+                    <button class="btn btn-primary">Join Forum</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ask Question Form -->
+    <section class="ask-question-section" id="ask-question-section">
+        <div class="container">
+            <div class="question-container">
+                <div class="question-header">
+                    <h2>Ask Your Question</h2>
+                    <p>Our experts will respond within 24 hours</p>
+                </div>
+                <form id="question-form" class="question-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="user-name">Your Name *</label>
+                            <input type="text" id="user-name" name="userName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="user-email">Email Address *</label>
+                            <input type="email" id="user-email" name="userEmail" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="user-phone">Phone Number</label>
+                            <input type="tel" id="user-phone" name="userPhone">
+                        </div>
+                        <div class="form-group">
+                            <label for="user-location">Location (District, State)</label>
+                            <input type="text" id="user-location" name="userLocation" placeholder="e.g., Pune, Maharashtra">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="question-category">Question Category *</label>
+                        <select id="question-category" name="questionCategory" required>
+                            <option value="">Select Category</option>
+                            <option value="crop-diseases">Crop Diseases & Pests</option>
+                            <option value="soil-management">Soil Management</option>
+                            <option value="irrigation">Irrigation & Water Management</option>
+                            <option value="fertilizers">Fertilizers & Nutrients</option>
+                            <option value="crop-selection">Crop Selection & Planning</option>
+                            <option value="harvesting">Harvesting & Post-Harvest</option>
+                            <option value="market-prices">Market Prices & Selling</option>
+                            <option value="government-schemes">Government Schemes</option>
+                            <option value="technology">Agricultural Technology</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question-title">Question Title *</label>
+                        <input type="text" id="question-title" name="questionTitle" placeholder="Brief title for your question" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="question-details">Detailed Question *</label>
+                        <textarea id="question-details" name="questionDetails" rows="6" placeholder="Please provide detailed information about your question, including crop type, symptoms, location, etc." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="question-images">Upload Images (Optional)</label>
+                        <input type="file" id="question-images" name="questionImages" multiple accept="image/*">
+                        <small class="form-help">Upload photos of affected crops, soil, or any relevant images (Max 5 images, 10MB each)</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="urgency-level">Urgency Level *</label>
+                        <select id="urgency-level" name="urgencyLevel" required>
+                            <option value="">Select Urgency</option>
+                            <option value="low">Low - General inquiry</option>
+                            <option value="medium">Medium - Need answer in 2-3 days</option>
+                            <option value="high">High - Need answer within 24 hours</option>
+                            <option value="urgent">Urgent - Crop emergency</option>
+                        </select>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="notificationConsent" required>
+                            <span class="checkmark"></span>
+                            I agree to receive notifications about my question and responses via email/SMS
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i> Submit Question
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find quick answers to common agricultural questions</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-categories">
+                    <button class="faq-category-btn active" data-category="all">All Questions</button>
+                    <button class="faq-category-btn" data-category="crop-diseases">Diseases & Pests</button>
+                    <button class="faq-category-btn" data-category="soil-management">Soil Management</button>
+                    <button class="faq-category-btn" data-category="irrigation">Irrigation</button>
+                    <button class="faq-category-btn" data-category="fertilizers">Fertilizers</button>
+                    <button class="faq-category-btn" data-category="government-schemes">Schemes</button>
+                </div>
+                <div class="faq-search">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="faq-search" placeholder="Search FAQs...">
+                    </div>
+                </div>
+                <div class="faq-list" id="faq-list">
+                    <!-- FAQ items will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Team -->
+    <section class="expert-team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Expert Team</h2>
+                <p class="section-subtitle">Meet the agricultural specialists ready to help you</p>
+            </div>
+            <div class="experts-grid">
+                <div class="expert-card">
+                    <div class="expert-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="expert-info">
+                        <h4>Dr. Rajesh Kumar</h4>
+                        <p class="expert-title">Horticulture Specialist</p>
+                        <p class="expert-experience">15+ years experience</p>
+                        <div class="expert-specialties">
+                            <span class="specialty">Fruit Crops</span>
+                            <span class="specialty">Disease Management</span>
+                        </div>
+                        <div class="expert-status">
+                            <span class="status-indicator online"></span>
+                            <span>Available Now</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="expert-card">
+                    <div class="expert-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="expert-info">
+                        <h4>Dr. Priya Sharma</h4>
+                        <p class="expert-title">Soil Science Expert</p>
+                        <p class="expert-experience">12+ years experience</p>
+                        <div class="expert-specialties">
+                            <span class="specialty">Soil Health</span>
+                            <span class="specialty">Nutrition Management</span>
+                        </div>
+                        <div class="expert-status">
+                            <span class="status-indicator online"></span>
+                            <span>Available Now</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="expert-card">
+                    <div class="expert-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="expert-info">
+                        <h4>Prof. Amit Patel</h4>
+                        <p class="expert-title">Agricultural Engineer</p>
+                        <p class="expert-experience">18+ years experience</p>
+                        <div class="expert-specialties">
+                            <span class="specialty">Irrigation Systems</span>
+                            <span class="specialty">Farm Mechanization</span>
+                        </div>
+                        <div class="expert-status">
+                            <span class="status-indicator busy"></span>
+                            <span>Busy - Available in 2 hours</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="expert-card">
+                    <div class="expert-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="expert-info">
+                        <h4>Dr. Sunita Desai</h4>
+                        <p class="expert-title">Plant Pathologist</p>
+                        <p class="expert-experience">10+ years experience</p>
+                        <div class="expert-specialties">
+                            <span class="specialty">Plant Diseases</span>
+                            <span class="specialty">Integrated Pest Management</span>
+                        </div>
+                        <div class="expert-status">
+                            <span class="status-indicator online"></span>
+                            <span>Available Now</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone Support</h3>
+                    <p>Call our helpline for immediate assistance</p>
+                    <div class="contact-details">
+                        <strong>+91 1800-123-4567</strong>
+                        <small>Toll-free | 24/7 Available</small>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Support</h3>
+                    <p>Send us your queries via email</p>
+                    <div class="contact-details">
+                        <strong>support@agrihortconnect.com</strong>
+                        <small>Response within 24 hours</small>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Office Address</h3>
+                    <p>Visit our office for in-person consultation</p>
+                    <div class="contact-details">
+                        <strong>SPPU Campus, Pune</strong>
+                        <small>Mon-Fri: 9:00 AM - 6:00 PM</small>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp Support</h3>
+                    <p>Quick support via WhatsApp</p>
+                    <div class="contact-details">
+                        <strong>+91 98765-43210</strong>
+                        <small>Mon-Sat: 8:00 AM - 8:00 PM</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-seedling"></i>
+                        <span>AgriHort Connect</span>
+                    </div>
+                    <p>Empowering farmers through technology and community engagement for sustainable horticulture practices.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="crops.html">Crop Guide</a></li>
+                        <li><a href="farmers.html">Farmer Portal</a></li>
+                        <li><a href="survey.html">Survey</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#faq-section">FAQs</a></li>
+                        <li><a href="#ask-question-section">Ask Question</a></li>
+                        <li><a href="#">Live Chat</a></li>
+                        <li><a href="#">Video Consultation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgriHort Connect. Developed by SPPU Computer Engineering Students.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/support.js"></script>
+</body>
+</html>

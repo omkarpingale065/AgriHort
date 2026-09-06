@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Survey - AgriHort Connect</title>
+    <meta name="description" content="Participate in community surveys to help improve agricultural practices and policies">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/survey.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">
+                    <i class="fas fa-seedling"></i>
+                    <span>AgriHort Connect</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="crops.html" class="nav-link">Crops Guide</a>
+                <a href="farmers.html" class="nav-link">Farmers Portal</a>
+                <a href="survey.html" class="nav-link active">Survey</a>
+                <a href="support.html" class="nav-link">Support</a>
+                <a href="login.html" class="nav-link login-btn">
+                    <i class="fas fa-user"></i> Login
+                </a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="survey-hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Community Survey</h1>
+                <p class="hero-subtitle">Your voice matters in shaping agricultural policies</p>
+                <p class="hero-description">
+                    Participate in our comprehensive survey to help us understand community needs, 
+                    challenges, and opportunities in horticulture. Your responses will directly 
+                    influence our programs and initiatives.
+                </p>
+                <div class="survey-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="1250">0</div>
+                        <div class="stat-label">Responses Collected</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="85">0</div>
+                        <div class="stat-label">Villages Covered</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-label">Districts Reached</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Survey Introduction -->
+    <section class="survey-intro">
+        <div class="container">
+            <div class="intro-content">
+                <div class="intro-text">
+                    <h2>Why Your Participation Matters</h2>
+                    <p>
+                        Our community engagement project aims to bridge the gap between academic research 
+                        and practical agricultural needs. Your responses help us:
+                    </p>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check-circle"></i> Identify key challenges faced by farmers</li>
+                        <li><i class="fas fa-check-circle"></i> Develop targeted solutions and programs</li>
+                        <li><i class="fas fa-check-circle"></i> Improve agricultural education and outreach</li>
+                        <li><i class="fas fa-check-circle"></i> Advocate for better policies and support</li>
+                        <li><i class="fas fa-check-circle"></i> Connect farmers with relevant resources</li>
+                    </ul>
+                </div>
+                <div class="intro-visual">
+                    <div class="survey-illustration">
+                        <i class="fas fa-poll-h"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Survey Form -->
+    <section class="survey-form-section">
+        <div class="container">
+            <div class="survey-container">
+                <div class="survey-header">
+                    <h2>Horticulture Community Survey 2024</h2>
+                    <p>Please take 10-15 minutes to share your experiences and insights</p>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="survey-progress"></div>
+                        </div>
+                        <span class="progress-text">Step <span id="current-step">1</span> of <span id="total-steps">6</span></span>
+                    </div>
+                </div>
+
+                <form id="community-survey-form" class="survey-form">
+                    <!-- Step 1: Personal Information -->
+                    <div class="survey-step active" data-step="1">
+                        <h3><i class="fas fa-user"></i> Personal Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="respondent-name">Full Name *</label>
+                                <input type="text" id="respondent-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="respondent-age">Age *</label>
+                                <select id="respondent-age" name="age" required>
+                                    <option value="">Select Age Group</option>
+                                    <option value="18-25">18-25 years</option>
+                                    <option value="26-35">26-35 years</option>
+                                    <option value="36-45">36-45 years</option>
+                                    <option value="46-55">46-55 years</option>
+                                    <option value="56-65">56-65 years</option>
+                                    <option value="65+">Above 65 years</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="respondent-gender">Gender *</label>
+                                <select id="respondent-gender" name="gender" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                    <option value="prefer-not-to-say">Prefer not to say</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="respondent-education">Education Level *</label>
+                                <select id="respondent-education" name="education" required>
+                                    <option value="">Select Education Level</option>
+                                    <option value="no-formal">No formal education</option>
+                                    <option value="primary">Primary school</option>
+                                    <option value="secondary">Secondary school</option>
+                                    <option value="higher-secondary">Higher secondary</option>
+                                    <option value="graduate">Graduate</option>
+                                    <option value="post-graduate">Post graduate</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="respondent-state">State *</label>
+                                <select id="respondent-state" name="state" required>
+                                    <option value="">Select State</option>
+                                    <option value="maharashtra">Maharashtra</option>
+                                    <option value="punjab">Punjab</option>
+                                    <option value="haryana">Haryana</option>
+                                    <option value="uttar-pradesh">Uttar Pradesh</option>
+                                    <option value="gujarat">Gujarat</option>
+                                    <option value="rajasthan">Rajasthan</option>
+                                    <option value="madhya-pradesh">Madhya Pradesh</option>
+                                    <option value="karnataka">Karnataka</option>
+                                    <option value="andhra-pradesh">Andhra Pradesh</option>
+                                    <option value="tamil-nadu">Tamil Nadu</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="respondent-district">District *</label>
+                                <input type="text" id="respondent-district" name="district" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="respondent-village">Village/Town *</label>
+                            <input type="text" id="respondent-village" name="village" required>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Agricultural Background -->
+                    <div class="survey-step" data-step="2">
+                        <h3><i class="fas fa-tractor"></i> Agricultural Background</h3>
+                        <div class="form-group">
+                            <label>Are you involved in agriculture? *</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="agricultural_involvement" value="farmer" required>
+                                    <span class="radio-custom"></span>
+                                    Farmer (own land)
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="agricultural_involvement" value="tenant" required>
+                                    <span class="radio-custom"></span>
+                                    Tenant farmer
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="agricultural_involvement" value="laborer" required>
+                                    <span class="radio-custom"></span>
+                                    Agricultural laborer
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="agricultural_involvement" value="related" required>
+                                    <span class="radio-custom"></span>
+                                    Agriculture-related business
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="agricultural_involvement" value="none" required>
+                                    <span class="radio-custom"></span>
+                                    Not involved in agriculture
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group conditional-field" data-condition="agricultural_involvement" data-values="farmer,tenant">
+                            <label for="farm-size">Farm Size (in acres)</label>
+                            <input type="number" id="farm-size" name="farm_size" min="0" step="0.1">
+                        </div>
+                        <div class="form-group">
+                            <label for="farming-experience">Years of experience in agriculture</label>
+                            <select id="farming-experience" name="farming_experience">
+                                <option value="">Select Experience</option>
+                                <option value="0-2">0-2 years</option>
+                                <option value="3-5">3-5 years</option>
+                                <option value="6-10">6-10 years</option>
+                                <option value="11-20">11-20 years</option>
+                                <option value="20+">More than 20 years</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="primary-crops">Primary crops grown (select all that apply)</label>
+                            <div class="checkbox-grid">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="primary_crops" value="rice">
+                                    <span class="checkmark"></span>
+                                    Rice
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="primary_crops" value="wheat">
+                                    <span class="checkmark"></span>
+                                    Wheat
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="primary_crops" value="tomato">
+                                    <span class="checkmark"></span>
+                                    Tomato
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="primary_crops" value="onion">
+                                    <span class="checkmark"></span>
+                                    Onion
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="primary_crops" value="potato">
+                                    <span class="checkmark"></span>
+                                    Potato
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="primary_crops" value="sugarcane">
+                                    <span class="checkmark"></span>
+                                    Sugarcane
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="primary_crops" value="cotton">
+                                    <span class="checkmark"></span>
+                                    Cotton
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="primary_crops" value="grapes">
+                                    <span class="checkmark"></span>
+                                    Grapes
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="primary_crops" value="mango">
+                                    <span class="checkmark"></span>
+                                    Mango
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="primary_crops" value="other">
+                                    <span class="checkmark"></span>
+                                    Other
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="other-crops">If other, please specify</label>
+                            <input type="text" id="other-crops" name="other_crops" placeholder="Please specify other crops">
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Challenges and Problems -->
+                    <div class="survey-step" data-step="3">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Challenges and Problems</h3>
+                        <div class="form-group">
+                            <label>What are the major challenges you face in agriculture? (Select all that apply) *</label>
+                            <div class="checkbox-grid">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="challenges" value="water-scarcity" required>
+                                    <span class="checkmark"></span>
+                                    Water scarcity
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="challenges" value="pest-diseases">
+                                    <span class="checkmark"></span>
+                                    Pest and diseases
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="challenges" value="market-access">
+                                    <span class="checkmark"></span>
+                                    Market access
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="challenges" value="price-fluctuation">
+                                    <span class="checkmark"></span>
+                                    Price fluctuation
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="challenges" value="credit-access">
+                                    <span class="checkmark"></span>
+                                    Access to credit
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="challenges" value="weather-climate">
+                                    <span class="checkmark"></span>
+                                    Weather/Climate change
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="challenges" value="technology-access">
+                                    <span class="checkmark"></span>
+                                    Access to technology
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="challenges" value="labor-shortage">
+                                    <span class="checkmark"></span>
+                                    Labor shortage
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="challenges" value="soil-degradation">
+                                    <span class="checkmark"></span>
+                                    Soil degradation
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="challenges" value="storage-facilities">
+                                    <span class="checkmark"></span>
+                                    Storage facilities
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="biggest-challenge">Which is your biggest challenge? *</label>
+                            <select id="biggest-challenge" name="biggest_challenge" required>
+                                <option value="">Select biggest challenge</option>
+                                <option value="water-scarcity">Water scarcity</option>
+                                <option value="pest-diseases">Pest and diseases</option>
+                                <option value="market-access">Market access</option>
+                                <option value="price-fluctuation">Price fluctuation</option>
+                                <option value="credit-access">Access to credit</option>
+                                <option value="weather-climate">Weather/Climate change</option>
+                                <option value="technology-access">Access to technology</option>
+                                <option value="labor-shortage">Labor shortage</option>
+                                <option value="soil-degradation">Soil degradation</option>
+                                <option value="storage-facilities">Storage facilities</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="challenge-details">Please describe your biggest challenge in detail</label>
+                            <textarea id="challenge-details" name="challenge_details" rows="4" placeholder="Describe the specific problems you face..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Technology and Information -->
+                    <div class="survey-step" data-step="4">
+                        <h3><i class="fas fa-mobile-alt"></i> Technology and Information Access</h3>
+                        <div class="form-group">
+                            <label>Do you use a smartphone? *</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="smartphone_usage" value="yes" required>
+                                    <span class="radio-custom"></span>
+                                    Yes, regularly
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="smartphone_usage" value="sometimes" required>
+                                    <span class="radio-custom"></span>
+                                    Yes, sometimes
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="smartphone_usage" value="no" required>
+                                    <span class="radio-custom"></span>
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>How do you get information about agriculture? (Select all that apply) *</label>
+                            <div class="checkbox-grid">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="info_sources" value="tv" required>
+                                    <span class="checkmark"></span>
+                                    Television
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="info_sources" value="radio">
+                                    <span class="checkmark"></span>
+                                    Radio
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="info_sources" value="newspaper">
+                                    <span class="checkmark"></span>
+                                    Newspaper
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="info_sources" value="internet">
+                                    <span class="checkmark"></span>
+                                    Internet/Mobile apps
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="info_sources" value="extension-officer">
+                                    <span class="checkmark"></span>
+                                    Extension officer
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="info_sources" value="fellow-farmers">
+                                    <span class="checkmark"></span>
+                                    Fellow farmers
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="info_sources" value="dealers">
+                                    <span class="checkmark"></span>
+                                    Input dealers
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="info_sources" value="training">
+                                    <span class="checkmark"></span>
+                                    Training programs
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="digital-literacy">How would you rate your digital literacy? *</label>
+                            <select id="digital-literacy" name="digital_literacy" required>
+                                <option value="">Select level</option>
+                                <option value="excellent">Excellent</option>
+                                <option value="good">Good</option>
+                                <option value="average">Average</option>
+                                <option value="poor">Poor</option>
+                                <option value="none">No digital skills</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Would you be interested in using a mobile app for agricultural information? *</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="app_interest" value="very-interested" required>
+                                    <span class="radio-custom"></span>
+                                    Very interested
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="app_interest" value="somewhat-interested" required>
+                                    <span class="radio-custom"></span>
+                                    Somewhat interested
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="app_interest" value="not-interested" required>
+                                    <span class="radio-custom"></span>
+                                    Not interested
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Community Engagement -->
+                    <div class="survey-step" data-step="5">
+                        <h3><i class="fas fa-users"></i> Community Engagement</h3>
+                        <div class="form-group">
+                            <label>Are you part of any farmer groups or cooperatives? *</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="group_membership" value="yes" required>
+                                    <span class="radio-custom"></span>
+                                    Yes
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="group_membership" value="no" required>
+                                    <span class="radio-custom"></span>
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>What kind of support would be most helpful for your community? (Select top 3) *</label>
+                            <div class="checkbox-grid">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="support_needed" value="training" required>
+                                    <span class="checkmark"></span>
+                                    Training programs
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="support_needed" value="financial">
+                                    <span class="checkmark"></span>
+                                    Financial assistance
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="support_needed" value="technology">
+                                    <span class="checkmark"></span>
+                                    Technology access
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="support_needed" value="market-linkage">
+                                    <span class="checkmark"></span>
+                                    Market linkage
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="support_needed" value="infrastructure">
+                                    <span class="checkmark"></span>
+                                    Infrastructure development
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="support_needed" value="healthcare">
+                                    <span class="checkmark"></span>
+                                    Healthcare facilities
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="support_needed" value="education">
+                                    <span class="checkmark"></span>
+                                    Education facilities
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="support_needed" value="water-management">
+                                    <span class="checkmark"></span>
+                                    Water management
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Would you be willing to participate in future community programs? *</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="future_participation" value="yes" required>
+                                    <span class="radio-custom"></span>
+                                    Yes, definitely
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="future_participation" value="maybe" required>
+                                    <span class="radio-custom"></span>
+                                    Maybe, depends on the program
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="future_participation" value="no" required>
+                                    <span class="radio-custom"></span>
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-preference">How would you prefer to be contacted for future programs?</label>
+                            <select id="contact-preference" name="contact_preference">
+                                <option value="">Select preference</option>
+                                <option value="phone">Phone call</option>
+                                <option value="sms">SMS</option>
+                                <option value="whatsapp">WhatsApp</option>
+                                <option value="email">Email</option>
+                                <option value="in-person">In-person visit</option>
+                                <option value="no-contact">Do not contact</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Step 6: Additional Information -->
+                    <div class="survey-step" data-step="6">
+                        <h3><i class="fas fa-comments"></i> Additional Information</h3>
+                        <div class="form-group">
+                            <label for="suggestions">What suggestions do you have for improving agriculture in your area?</label>
+                            <textarea id="suggestions" name="suggestions" rows="4" placeholder="Share your ideas and suggestions..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="success-story">Do you have any success story or best practice to share?</label>
+                            <textarea id="success-story" name="success_story" rows="4" placeholder="Share your success story..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="additional-comments">Any additional comments or concerns?</label>
+                            <textarea id="additional-comments" name="additional_comments" rows="4" placeholder="Any other information you'd like to share..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-info">Contact information (optional - for follow-up)</label>
+                            <input type="text" id="contact-info" name="contact_info" placeholder="Phone number or email">
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="data_consent" required>
+                                <span class="checkmark"></span>
+                                I consent to the use of this data for research and program development purposes. 
+                                My personal information will be kept confidential.
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="survey-navigation">
+                        <button type="button" class="btn btn-secondary" id="prev-btn" style="display: none;">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </button>
+                        <button type="button" class="btn btn-primary" id="next-btn">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button type="submit" class="btn btn-primary" id="submit-btn" style="display: none;">
+                            <i class="fas fa-paper-plane"></i> Submit Survey
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Survey Results Preview -->
+    <section class="survey-results" id="survey-results">
+        <div class="container">
+            <div class="section-header">
+                <h2>Survey Insights</h2>
+                <p>Preliminary findings from our community survey</p>
+            </div>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Top Challenges</h3>
+                    <div class="challenge-list">
+                        <div class="challenge-item">
+                            <span>Water Scarcity</span>
+                            <div class="challenge-bar">
+                                <div class="challenge-fill" style="width: 78%"></div>
+                            </div>
+                            <span>78%</span>
+                        </div>
+                        <div class="challenge-item">
+                            <span>Market Access</span>
+                            <div class="challenge-bar">
+                                <div class="challenge-fill" style="width: 65%"></div>
+                            </div>
+                            <span>65%</span>
+                        </div>
+                        <div class="challenge-item">
+                            <span>Price Fluctuation</span>
+                            <div class="challenge-bar">
+                                <div class="challenge-fill" style="width: 58%"></div>
+                            </div>
+                            <span>58%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="result-card">
+                    <div class="result-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Technology Adoption</h3>
+                    <div class="tech-stats">
+                        <div class="tech-stat">
+                            <span class="tech-number">72%</span>
+                            <span class="tech-label">Use Smartphones</span>
+                        </div>
+                        <div class="tech-stat">
+                            <span class="tech-number">45%</span>
+                            <span class="tech-label">Use Internet for Info</span>
+                        </div>
+                        <div class="tech-stat">
+                            <span class="tech-number">89%</span>
+                            <span class="tech-label">Interested in Apps</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="result-card">
+                    <div class="result-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Support Needed</h3>
+                    <div class="support-list">
+                        <div class="support-item">Training Programs</div>
+                        <div class="support-item">Financial Assistance</div>
+                        <div class="support-item">Market Linkage</div>
+                        <div class="support-item">Technology Access</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-seedling"></i>
+                        <span>AgriHort Connect</span>
+                    </div>
+                    <p>Empowering farmers through technology and community engagement for sustainable horticulture practices.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="crops.html">Crop Guide</a></li>
+                        <li><a href="farmers.html">Farmer Portal</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@agrihortconnect.com</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-map-marker-alt"></i> SPPU, Pune, Maharashtra</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgriHort Connect. Developed by SPPU Computer Engineering Students.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/survey.js"></script>
+</body>
+</html>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers Portal - AgriHort Connect</title>
+    <meta name="description" content="Dedicated portal for farmers to track crops, record profits, and connect with the community">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/farmers.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">
+                    <i class="fas fa-seedling"></i>
+                    <span>AgriHort Connect</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="crops.html" class="nav-link">Crops Guide</a>
+                <a href="farmers.html" class="nav-link active">Farmers Portal</a>
+                <a href="survey.html" class="nav-link">Survey</a>
+                <a href="support.html" class="nav-link">Support</a>
+                <a href="login.html" class="nav-link login-btn" id="auth-btn">
+                    <i class="fas fa-user"></i> <span id="auth-text">Login</span>
+                </a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="farmers-hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Farmers Portal</h1>
+                <p class="hero-subtitle">Your digital companion for modern agriculture</p>
+                <p class="hero-description">
+                    Track your crops, record profits, analyze trends, and connect with fellow farmers 
+                    in our comprehensive agricultural management platform.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" id="join-portal-btn">
+                        <i class="fas fa-user-plus"></i> Join Portal
+                    </button>
+                    <button class="btn btn-secondary" id="demo-btn">
+                        <i class="fas fa-play"></i> View Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portal Features -->
+    <section class="portal-features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Portal Features</h2>
+                <p class="section-subtitle">Everything you need to manage your agricultural business</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Crop Tracking</h3>
+                    <p>Monitor your crop growth, record planting dates, track harvest yields, and analyze seasonal performance.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>Profit Analysis</h3>
+                    <p>Calculate profits, track expenses, analyze cost-benefit ratios, and make informed financial decisions.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Problem Reporting</h3>
+                    <p>Report crop diseases, pest issues, and other problems to get expert advice and community support.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Connect</h3>
+                    <p>Connect with fellow farmers, share experiences, learn best practices, and build networks.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud-sun"></i>
+                    </div>
+                    <h3>Weather Updates</h3>
+                    <p>Get real-time weather forecasts, seasonal predictions, and agricultural advisories for your region.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Market Prices</h3>
+                    <p>Access current market prices, price trends, and find the best markets for your produce.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration/Login Forms -->
+    <section class="auth-section" id="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <!-- Registration Form -->
+                <div class="auth-form" id="register-form">
+                    <div class="form-header">
+                        <h2>Join Farmers Portal</h2>
+                        <p>Create your account to start managing your agricultural business</p>
+                    </div>
+                    <form id="farmer-register-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="reg-first-name">First Name *</label>
+                                <input type="text" id="reg-first-name" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-last-name">Last Name *</label>
+                                <input type="text" id="reg-last-name" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-email">Email Address *</label>
+                            <input type="email" id="reg-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-phone">Phone Number *</label>
+                            <input type="tel" id="reg-phone" name="phone" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="reg-state">State *</label>
+                                <select id="reg-state" name="state" required>
+                                    <option value="">Select State</option>
+                                    <option value="maharashtra">Maharashtra</option>
+                                    <option value="punjab">Punjab</option>
+                                    <option value="haryana">Haryana</option>
+                                    <option value="uttar-pradesh">Uttar Pradesh</option>
+                                    <option value="gujarat">Gujarat</option>
+                                    <option value="rajasthan">Rajasthan</option>
+                                    <option value="madhya-pradesh">Madhya Pradesh</option>
+                                    <option value="karnataka">Karnataka</option>
+                                    <option value="andhra-pradesh">Andhra Pradesh</option>
+                                    <option value="tamil-nadu">Tamil Nadu</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-district">District *</label>
+                                <input type="text" id="reg-district" name="district" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-farm-size">Farm Size (in acres) *</label>
+                            <input type="number" id="reg-farm-size" name="farmSize" min="0.1" step="0.1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-crops">Primary Crops (comma separated)</label>
+                            <input type="text" id="reg-crops" name="crops" placeholder="e.g., Rice, Wheat, Tomato">
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-password">Password *</label>
+                            <input type="password" id="reg-password" name="password" required minlength="6">
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-confirm-password">Confirm Password *</label>
+                            <input type="password" id="reg-confirm-password" name="confirmPassword" required>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="reg-terms" name="terms" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="#" class="link">Terms of Service</a> and <a href="#" class="link">Privacy Policy</a>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-user-plus"></i> Create Account
+                        </button>
+                    </form>
+                    <div class="form-footer">
+                        <p>Already have an account? <a href="#" class="link" id="show-login">Login here</a></p>
+                    </div>
+                </div>
+
+                <!-- Login Form -->
+                <div class="auth-form hidden" id="login-form">
+                    <div class="form-header">
+                        <h2>Login to Portal</h2>
+                        <p>Access your farmer dashboard and manage your crops</p>
+                    </div>
+                    <form id="farmer-login-form">
+                        <div class="form-group">
+                            <label for="login-email">Email Address *</label>
+                            <input type="email" id="login-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Password *</label>
+                            <input type="password" id="login-password" name="password" required>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="login-remember" name="remember">
+                                <span class="checkmark"></span>
+                                Remember me
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </button>
+                    </form>
+                    <div class="form-footer">
+                        <p><a href="#" class="link">Forgot your password?</a></p>
+                        <p>Don't have an account? <a href="#" class="link" id="show-register">Register here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section (Hidden by default) -->
+    <section class="dashboard-section hidden" id="dashboard-section">
+        <div class="container">
+            <div class="dashboard-header">
+                <div class="welcome-message">
+                    <h2>Welcome back, <span id="farmer-name">Farmer</span>!</h2>
+                    <p>Manage your crops and track your agricultural progress</p>
+                </div>
+                <div class="dashboard-actions">
+                    <button class="btn btn-primary" id="add-crop-btn">
+                        <i class="fas fa-plus"></i> Add New Crop
+                    </button>
+                    <button class="btn btn-secondary" id="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dashboard Stats -->
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="total-crops">0</h3>
+                        <p>Active Crops</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="total-profit">₹0</h3>
+                        <p>Total Profit</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="current-season">Kharif</h3>
+                        <p>Current Season</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="active-problems">0</h3>
+                        <p>Active Problems</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <div class="dashboard-tabs">
+                    <button class="tab-btn active" data-tab="crops">My Crops</button>
+                    <button class="tab-btn" data-tab="profits">Profit Analysis</button>
+                    <button class="tab-btn" data-tab="problems">Problems</button>
+                    <button class="tab-btn" data-tab="community">Community</button>
+                </div>
+
+                <!-- Crops Tab -->
+                <div class="tab-content active" id="crops-tab">
+                    <div class="crops-list" id="crops-list">
+                        <!-- Dynamic content will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Profits Tab -->
+                <div class="tab-content" id="profits-tab">
+                    <div class="profit-analysis">
+                        <div class="chart-container">
+                            <canvas id="profit-chart"></canvas>
+                        </div>
+                        <div class="profit-summary">
+                            <h4>Profit Summary</h4>
+                            <div class="summary-item">
+                                <span>Total Revenue:</span>
+                                <span id="total-revenue">₹0</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Total Expenses:</span>
+                                <span id="total-expenses">₹0</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Net Profit:</span>
+                                <span id="net-profit">₹0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problems Tab -->
+                <div class="tab-content" id="problems-tab">
+                    <div class="problems-section">
+                        <div class="section-header">
+                            <h3>Report a Problem</h3>
+                            <button class="btn btn-primary" id="report-problem-btn">
+                                <i class="fas fa-plus"></i> Report Problem
+                            </button>
+                        </div>
+                        <div class="problems-list" id="problems-list">
+                            <!-- Dynamic content will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Community Tab -->
+                <div class="tab-content" id="community-tab">
+                    <div class="community-section">
+                        <h3>Community Discussions</h3>
+                        <div class="community-posts" id="community-posts">
+                            <!-- Dynamic content will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Crop Modal -->
+    <div class="modal" id="add-crop-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Crop</h2>
+                <button class="modal-close" id="add-crop-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="add-crop-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="crop-name">Crop Name *</label>
+                            <input type="text" id="crop-name" name="cropName" required placeholder="e.g., Tomato, Mango, Rose">
+                        </div>
+                        <div class="form-group">
+                            <label for="crop-variety">Variety</label>
+                            <input type="text" id="crop-variety" name="variety" placeholder="e.g., Hybrid, Desi, Grafted">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="crop-category">Crop Category *</label>
+                            <select id="crop-category" name="cropCategory" required>
+                                <option value="">Select Category</option>
+                                <option value="fruits">Fruits</option>
+                                <option value="vegetables">Vegetables</option>
+                                <option value="flowers">Flowers</option>
+                                <option value="herbs">Herbs & Spices</option>
+                                <option value="cereals">Cereals</option>
+                                <option value="pulses">Pulses</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="crop-status">Current Status *</label>
+                            <select id="crop-status" name="cropStatus" required>
+                                <option value="">Select Status</option>
+                                <option value="planning">Planning</option>
+                                <option value="planted">Recently Planted</option>
+                                <option value="growing">Growing</option>
+                                <option value="flowering">Flowering</option>
+                                <option value="fruiting">Fruiting</option>
+                                <option value="ready-harvest">Ready for Harvest</option>
+                                <option value="harvesting">Currently Harvesting</option>
+                                <option value="harvested">Harvested</option>
+                                <option value="sold">Sold</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="planting-date">Planting Date *</label>
+                            <input type="date" id="planting-date" name="plantingDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="expected-harvest">Expected Harvest Date</label>
+                            <input type="date" id="expected-harvest" name="expectedHarvest">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="area-planted">Area Planted (acres) *</label>
+                            <input type="number" id="area-planted" name="areaPlanted" min="0.1" step="0.1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="investment">Initial Investment (₹) *</label>
+                            <input type="number" id="investment" name="investment" min="0" required>
+                        </div>
+                    </div>
+                    
+                    <!-- Harvest Details (shown only for harvested/sold crops) -->
+                    <div class="harvest-details" id="harvest-details" style="display: none;">
+                        <h4 style="color: var(--primary-green); margin: 1.5rem 0 1rem 0; padding-top: 1rem; border-top: 1px solid var(--light-gray);">
+                            <i class="fas fa-cut"></i> Harvest Details
+                        </h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="actual-harvest-date">Actual Harvest Date</label>
+                                <input type="date" id="actual-harvest-date" name="actualHarvestDate">
+                            </div>
+                            <div class="form-group">
+                                <label for="harvest-quantity">Harvest Quantity (kg)</label>
+                                <input type="number" id="harvest-quantity" name="harvestQuantity" min="0" step="0.1">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="selling-price">Selling Price (₹ per kg)</label>
+                                <input type="number" id="selling-price" name="sellingPrice" min="0" step="0.1">
+                            </div>
+                            <div class="form-group">
+                                <label for="total-revenue">Total Revenue (₹)</label>
+                                <input type="number" id="total-revenue-input" name="totalRevenue" min="0" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="additional-expenses">Additional Expenses (₹)</label>
+                            <input type="number" id="additional-expenses" name="additionalExpenses" min="0" placeholder="Harvesting, transportation, etc.">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="crop-notes">Notes</label>
+                        <textarea id="crop-notes" name="notes" rows="3" placeholder="Any additional notes about this crop..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-plus"></i> Add Crop
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-seedling"></i>
+                        <span>AgriHort Connect</span>
+                    </div>
+                    <p>Empowering farmers through technology and community engagement for sustainable horticulture practices.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="crops.html">Crop Guide</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="survey.html">Community Survey</a></li>
+                        <li><a href="#">Best Practices</a></li>
+                        <li><a href="#">Weather Updates</a></li>
+                        <li><a href="#">Market Prices</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgriHort Connect. Developed by SPPU Computer Engineering Students.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/farmers.js"></script>
+</body>
+</html>
